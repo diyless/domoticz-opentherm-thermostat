@@ -140,11 +140,11 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
   Serial.println("Received, id=" + id);
 
-  if (id == "00040004") {
+  if (id == SETPOINT_NORMAL_ID) {
     const String targetTemp((const char*)doc["svalue1"]);
     sp = targetTemp.toFloat();
   }
-  else if (id == "00040001") {
+  else if (id == CONTROL_ID) {
     const String targetMode((const char*)doc["svalue1"]);
     Serial.println("Set mode " + targetMode);
     if (targetMode == "0")

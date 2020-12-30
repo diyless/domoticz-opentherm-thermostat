@@ -18,3 +18,6 @@ const int ROOM_TEMP_SENSOR_PIN = 14; //for Arduino, 14 for ESP8266 (D5), 18 for 
 
 const char* OUT_TOPIC = "domoticz/out";
 const char* IN_TOPIC = "domoticz/in";
+
+const String SETPOINT_NORMAL_ID = "xxxxxx";
+const String CONTROL_ID = "xxxxxx";
